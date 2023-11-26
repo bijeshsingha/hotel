@@ -2,26 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    height: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --primary-color: #c4a67e;
+  --secondary-color: #bd9b6e;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Open+Sans:wght@300&display=swap');
+.bodoni-font {
+  font-family: 'Bodoni Moda', serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+.heading-font {
+  font-family: 'PT Serif', serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.para-font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+.noto-font{
+  font-family: 'Noto Serif', serif;
 }
