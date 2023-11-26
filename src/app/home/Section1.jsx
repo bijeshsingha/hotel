@@ -5,20 +5,23 @@ import React, {useState, useEffect} from 'react'
 import Button from "../components/PrimaryButton";
 
 const Section1 = () => {
-  const [windowWidth, setWindowWidth] = useState(globalThis.window?.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(globalThis.window?.innerWidth);
+    // Attach the event listener when the component mounts
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
+  }, []); 
 
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const styling =  windowWidth < 1024 ? {
+  let styling =  windowWidth < 1024 ? {
             backgroundImage: `url('/images/building1.jpeg')`,
             width: "100%",
             height: "100%",
