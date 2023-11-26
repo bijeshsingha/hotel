@@ -5,10 +5,10 @@ import React, {useState, useEffect} from 'react'
 import Button from "../components/PrimaryButton";
 
 const Section1 = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(globalThis.window?.innerWidth);
 
   const handleResize = () => {
-    setWindowWidth(window.innerWidth);
+    setWindowWidth(globalThis.window?.innerWidth);
   };
 
   useEffect(() => {
