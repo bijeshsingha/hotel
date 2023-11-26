@@ -1,36 +1,45 @@
 "use client";
-import Image from 'next/image';
-import Link from 'next/link';
-import React, {useState, useEffect} from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import Button from "../components/PrimaryButton";
 
 const Section1 = () => {
-  const [windowWidth, setWindowWidth] = useState(globalThis.window?.innerWidth);
-
-  const handleResize = () => {
-    setWindowWidth(globalThis.window?.innerWidth);
-  };
+  const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
+
+    setWindowWidth(globalThis.window?.innerWidth)
+
+    const handleResize = () => {
+      setWindowWidth(globalThis.window?.innerWidth);
+    };
+
     // Attach the event listener when the component mounts
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Cleanup the event listener when the component unmounts
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
-  }, []); 
+  }, []);
 
-  let styling =  windowWidth < 1024 ? {
-            backgroundImage: `url('/images/building1.jpeg')`,
-            width: "100%",
-            height: "100%",
-            backgroundSize: "cover",
-            overflow: "hidden",
-            backgroundPosition: 'center'
-          } : {}
+  let styling =
+    windowWidth < 1024
+      ? {
+          backgroundImage: `url('/images/building1.jpeg')`,
+          width: "100%",
+          height: "100%",
+          backgroundSize: "cover",
+          overflow: "hidden",
+          backgroundPosition: "center",
+        }
+      : {};
   return (
-    <section className='flex lg:flex-row flex-col  lg:px-[14%] px-5 w-full' style={styling}>
+    <section
+      className="flex lg:flex-row flex-col  lg:px-[14%] px-5 w-full"
+      style={styling}
+    >
       <div className="h-[100vh] w-full flex flex-col justify-center lg:pr-[5%] gap-11 ">
         <div className="flex flex-col justify-center gap-2">
           <h3 className="md:text-4xl text-2xl font-bold text-primary-color bodoni-font">
@@ -57,6 +66,6 @@ const Section1 = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Section1
+export default Section1;
