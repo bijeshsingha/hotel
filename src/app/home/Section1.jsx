@@ -8,8 +8,7 @@ const Section1 = () => {
   const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
-
-    setWindowWidth(globalThis.window?.innerWidth)
+    setWindowWidth(globalThis.window?.innerWidth);
 
     const handleResize = () => {
       setWindowWidth(globalThis.window?.innerWidth);
@@ -53,11 +52,10 @@ const Section1 = () => {
           <Button text={"BOOK NOW"} />
         </Link>
       </div>
-
-      <div className="w-[100%] h-auto flex items-center justify-center">
+      <div className="w-[100%] h-auto flex items-center justify-center ">
         <Image
           alt="building"
-          className="lg:block hidden mt-11"
+          className="lg:block hidden mt-11 shadow-md"
           width="500"
           height="800"
           quality={100}

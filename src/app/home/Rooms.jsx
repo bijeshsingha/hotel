@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
-import Button from "../components/PrimaryButton"
+import Button from "../components/PrimaryButton";
 
 const Rooms = ({ key, roomTitle, roomPrice, roomDesc, img, row }) => {
   const slides = img;
@@ -61,7 +61,7 @@ const Rooms = ({ key, roomTitle, roomPrice, roomDesc, img, row }) => {
                     setCurrent(i);
                   }}
                   key={"circle" + i}
-                  className={`rounded-full w-5 h-5 cursor-pointer  ${
+                  className={`rounded-full md:w-5 md:h-5 w-3 h-3 cursor-pointer  ${
                     i == current ? "bg-white" : "bg-gray-500"
                   }`}
                 ></div>
@@ -81,7 +81,7 @@ const Rooms = ({ key, roomTitle, roomPrice, roomDesc, img, row }) => {
         </h1>
         <p
           className={
-            "text-lg lg:text-xl text-center heading-font text-[#686868] " +
+            "text-lg lg:text-xl text-center para-font text-[#686868] " +
             (row === "reverse"
               ? "lg:text-end px-3 md:px-5 lg:px-0 lg:pl-[30%]"
               : "lg:text-start px-3 md:px-5 lg:px-0 lg:pr-[30%]")
@@ -89,15 +89,16 @@ const Rooms = ({ key, roomTitle, roomPrice, roomDesc, img, row }) => {
         >
           {roomDesc}
         </p>
-        <p className="text-lg lg:text-xl text-center lg:text-start heading-font text-[#686868]">
+        <p className="text-lg lg:text-xl text-center lg:text-start para-font text-[#686868]">
           Price:
           <span className="text-black">
-            <CurrencyRupeeIcon />{roomPrice}/-
-          </span>
-           {" "}per night*
+            <CurrencyRupeeIcon />
+            {roomPrice}/-
+          </span>{" "}
+          per night*
         </p>
         <Link href={"/"}>
-          <Button text={"BOOK NOW"}/>
+          <Button text={"BOOK NOW"} />
         </Link>
       </div>
     </div>
