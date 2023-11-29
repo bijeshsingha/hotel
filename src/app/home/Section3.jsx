@@ -6,16 +6,16 @@ import Image from "next/image";
 
 const Section3 = () => {
   return (
-    <section className="h-[60vh] flex flex-col items-center py-[3rem]">
+    <section className="h-auto flex flex-col items-center py-[3rem] ">
       <div className="flex flex-col items-center justify-center">
-        <h3 className="flex p-4 text-sm md:text-base">HOTELLON IS BEST</h3>
+        <h3 className="flex py-4 text-[0.7rem] md:text-base">HOTELLON IS BEST</h3>
         <div className="flex items-center w-10 border border-primary-color"></div>
 
         <p className="capitalize text-lg md:text-4xl noto-font py-6">
           Great features of hotel divine view
         </p>
       </div>
-      <div className="flex flex-col w-full gap-10  py-10">
+      <div className="flex flex-col w-full gap-[1rem]  py-10">
         <ul className="flex flex-col lg:flex-row items-center justify-center gap-[1rem]">
           <li className="flex flex-col justify-center">
             <FeaturesCard
