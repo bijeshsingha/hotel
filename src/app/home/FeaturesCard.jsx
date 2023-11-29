@@ -10,7 +10,7 @@ const FeaturesCard = ({ icon, title, desc }) => {
       </div>
       <div className="w-full flex flex-col justify-center text-center p-2">
         <h1 className="md:text-2xl text-xl noto-font py-5">{title}</h1>
-        <p className="para-font text-gray-400">{desc}</p>
+        <p className="para-font text-slate-500">{desc}</p>
       </div>
     </div>
   );

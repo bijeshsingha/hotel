@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import Rooms from "./Rooms";
 import Button from "../components/PrimaryButton";
+import Heading from "../components/Heading";
 
 //<img src="" width="500" height="600" />
 // <img src="" width="500" height="600" />
@@ -69,11 +70,16 @@ const Section2 = () => {
     else setCurrent(current + 1);
   };
   return (
-    <section className="h-auto bg-slate-200 flex items-center w-full flex-col m-auto">
-      <div className="text-center md:py-[6%] pt-[3rem] pb-7 text-4xl md:text-5xl font-bold noto-font">
-        OUR ROOMS
-      </div>
-      <div className="flex flex-col gap-10">
+    <section className="h-auto flex flex-col items-center py-[3rem] bg-slate-200 w-full m-auto">
+      
+      <Heading
+        topText={"LIVE A LUXURIOUS LIFE"}
+        mainHeading={"best quality rooms"}
+        desc={
+          "Experience elegance and comfort in our thoughtfully designed rooms at Hotel Divine View, offering a perfect blend of style, modern amenities, and personalized service"
+        }
+      />
+      <div className="flex flex-col gap-10 py-10">
         {homePageRooms.map((room, index) => (
           <Rooms
             key={index}

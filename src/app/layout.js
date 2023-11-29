@@ -7,7 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/NavBar/Nav";
-import Head from "next/head";
+import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ["latin"] });
 const bodoni = Bodoni_Moda({ weight: "400", subsets: ["latin"] });
@@ -21,6 +21,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <head>
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
       >
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

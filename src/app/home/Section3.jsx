@@ -3,18 +3,18 @@ import React from "react";
 import FeaturesCard from "./FeaturesCard";
 import MapIcon from "@mui/icons-material/Map";
 import Image from "next/image";
+import Heading from "../components/Heading";
 
 const Section3 = () => {
   return (
     <section className="h-auto flex flex-col items-center py-[3rem] ">
-      <div className="flex flex-col items-center justify-center">
-        <h3 className="flex py-4 text-[0.7rem] md:text-base">HOTELLON IS BEST</h3>
-        <div className="flex items-center w-10 border border-primary-color"></div>
-
-        <p className="capitalize text-lg md:text-4xl noto-font py-6">
-          Great features of hotel divine view
-        </p>
-      </div>
+      <Heading
+        topText={"HOTELLON IS BEST"}
+        mainHeading={"Great features of hotel divine view"}
+        desc={
+          "Explore the exceptional features of Hotel Divine View, where luxury meets comfort for an unforgettable stay"
+        }
+      />
       <div className="flex flex-col w-full gap-[1rem]  py-10">
         <ul className="flex flex-col lg:flex-row items-center justify-center gap-[1rem]">
           <li className="flex flex-col justify-center">
@@ -23,7 +23,7 @@ const Section3 = () => {
                 <Image src="/images/location.png" width={"80"} height={100} />
               }
               title="Great Location"
-              desc="Located at the heart of the City, Paltan Baazar, close to railway station"
+              desc="Located at the heart of the City, 500m to railway station"
             />
           </li>
           <li className="">
@@ -37,11 +37,9 @@ const Section3 = () => {
           </li>
           <li className="">
             <FeaturesCard
-              icon={
-                <Image src="/images/wifi.png" width={"80"} height={100} />
-              }
+              icon={<Image src="/images/wifi.png" width={"80"} height={100} />}
               title="Free Wifi"
-              desc="We offer free parking"
+              desc="We offer free wifi"
             />
           </li>
         </ul>
@@ -49,19 +47,19 @@ const Section3 = () => {
           <li className="">
             <FeaturesCard
               icon={
-                <Image src="/images/location.png" width={"80"} height={100} />
+                <Image src="/images/roomService.png" width={"80"} height={100} />
               }
-              title="Great Location"
-              desc=""
+              title="24hrs Room Service"
+              desc="Room Service available 24hrs"
             />
           </li>
           <li className="">
             <FeaturesCard
               icon={
-                <Image src="/images/location.png" width={"80"} height={100} />
+                <Image src="/images/carRental.png" width={"80"} height={100} />
               }
-              title="Great Location"
-              desc=""
+              title="Car Rental/Travel Assistance"
+              desc="Our expert will help you plan your trip"
             />
           </li>
         </ul>
