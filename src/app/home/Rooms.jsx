@@ -21,7 +21,6 @@ const Rooms = ({ key, roomTitle, roomPrice, roomDesc, img, row }) => {
   };
   return (
     <div
-      key={key}
       className={
         "flex flex-col w-full h-full gap-10 " +
         (row === "reverse" ? "lg:flex-row-reverse" : "lg:flex-row")
@@ -40,8 +39,8 @@ const Rooms = ({ key, roomTitle, roomPrice, roomDesc, img, row }) => {
               transform: `translateX(-${current * 100}%)`,
             }}
           >
-            {slides.map((s) => {
-              return <img src={s.src} />;
+            {slides.map((s,index) => {
+              return <img key={index} src={s.src} />;
             })}
           </div>
           <div className=" absolute top-0 h-full w-full justify-between items-center flex text-white px-1 text-3xl">
