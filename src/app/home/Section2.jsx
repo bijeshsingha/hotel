@@ -70,7 +70,7 @@ const Section2 = () => {
     else setCurrent(current + 1);
   };
   return (
-    <section className="h-auto flex flex-col items-center py-[3rem] bg-slate-200 w-full m-auto">
+    <section className="h-auto flex flex-col items-center bg-[#fbf8f3] py-[3rem] w-full m-auto">
       
       <Heading
         topText={"LIVE A LUXURIOUS LIFE"}

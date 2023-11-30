@@ -44,9 +44,16 @@ const Section1 = () => {
           <h3 className="md:text-4xl text-2xl font-bold text-primary-color bodoni-font">
             ITS AMAZING
           </h3>
-          <h1 className="md:text-6xl text-4xl noto-font font-bold text-white lg:text-black">
-            Enjoy A Dream Vacation in Hotel Divine View
+          <h1 className="md:text-6xl text-4xl pt-2 pb-6 noto-font font-bold text-white lg:text-black">
+            Welcome To Hotel Divine Diew
           </h1>
+          <p className="para-font text-slate-500">
+            Hotel Divine View is located in the Heart of the City Guwahati at
+            Paltan Bazar. Hotel Divine View is a brand new Hotel which started
+            during the end of 2018 and within few months of operation it already
+            making waves in Guwahati which focus on local fun, and packages for
+            every type of visitor.
+          </p>
         </div>
         <Link href={"/"}>
           <Button text={"BOOK NOW"} />

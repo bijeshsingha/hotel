@@ -7,6 +7,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
   useEffect(() => {
@@ -29,7 +30,7 @@ const Footer = () => {
   return (
     <footer className="footer flex flex-col justify-center items-center bg-gray-900   text-white">
       <div className="container flex justify-between p-5 ">
-        <div className=" w-full flex flex-col items-start text-center md:text-start md:flex-row md:justify-between">
+        <div className=" w-full flex flex-col items-start text-start md:flex-row md:justify-between">
           <div className="py-6 ">
             <h1 className="text-lg font-bold noto-font py-4">About</h1>
             <ul className="flex flex-col gap-1">
@@ -49,7 +50,7 @@ const Footer = () => {
           </div>
           <div className="py-6">
             <h1 className="text-lg font-bold noto-font py-4">Our Address</h1>
-            <ul className="flex flex-col gap-1">
+            <ul className="flex flex-col gap-2">
               <li>
                 <div className="text-sm para-font text-white">
                   <LocationOnIcon fontSize="medium"/>
@@ -60,6 +61,11 @@ const Footer = () => {
               <li>
                 <div className="text-sm para-font text-white">
                   <PhoneIcon /> Call us: +91-69017 41211/ +91-97062 77133
+                </div>
+              </li>
+              <li>
+                <div className="text-sm para-font text-white">
+                  <EmailIcon /> divineview02@gmail.com
                 </div>
               </li>
             </ul>
