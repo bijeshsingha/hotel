@@ -6,7 +6,7 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import Button from "../components/PrimaryButton";
 
-const Rooms = ({ key, roomTitle, roomPrice, roomDesc, img, row }) => {
+const Rooms = ({ index, roomTitle, roomPrice, roomDesc, img, row }) => {
   const slides = img;
   let [current, setCurrent] = useState(0);
   console.log(row);
@@ -76,7 +76,7 @@ const Rooms = ({ key, roomTitle, roomPrice, roomDesc, img, row }) => {
         }
       >
         <h1 className="text-4xl lg:text-5xl heading-font text-[#c4a67e]">
-          {roomTitle}
+          <Link href={'/rooms/' + roomTitle.replace(/\s+/g, "")} >{roomTitle}</Link>
         </h1>
         <p
           className={

@@ -10,23 +10,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
-  useEffect(() => {
-    const handleScroll = (event) => {
-      // Check if the user is scrolling down
-      if (event.deltaY > 0) {
-        // Prevent the default behavior (scrolling down)
-        event.preventDefault();
-      }
-    };
-
-    // Add the scroll event listener when the component mounts
-    window.addEventListener('wheel', handleScroll);
-
-    // Remove the scroll event listener when the component unmounts
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-    };
-  }, []);
+  
   return (
     <footer className="footer flex flex-col justify-center items-center bg-gray-900   text-white">
       <div className="container flex justify-between p-5 ">

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Container from "../Container";
 import Logo from "./Logo";
 import Search from "./Search";
-import UserMenu from "./Hamburger";
+import Hamburger from "./Hamburger";
 import Link from "next/link";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -61,7 +61,7 @@ const Nav = () => {
                 <Logo />
               </Link>
               <Search />
-              <UserMenu />
+              <Hamburger />
             </div>
           </Container>
 
