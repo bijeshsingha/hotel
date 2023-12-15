@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Container from "../Container";
 import Logo from "./Logo";
 import Search from "./Search";
-import Hamburger from "./Hamburger";
+import MenuOverlay from "./MenuOverlay";
+import Hambuerger from "./Hamburger";
 import Link from "next/link";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -11,6 +12,7 @@ import { usePathname } from "next/navigation";
 
 const Nav = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,11 +63,9 @@ const Nav = () => {
                 <Logo />
               </Link>
               <Search />
-              <Hamburger />
+              <Hambuerger isOpen={isOpen} setIsOpen={setIsOpen}/>
             </div>
           </Container>
-
-          {/* Your sticky element content */}
         </div>
       </div>
     </nav>

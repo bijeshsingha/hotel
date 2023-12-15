@@ -33,3 +33,18 @@ body,
 .eb-font {
   font-family: "EB Garamond", serif;
 }
+
+.carousel-container {
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+}

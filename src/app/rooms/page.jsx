@@ -36,7 +36,7 @@ const RoomsPage = () => {
       className="pt-[200px] h-auto text-center flex flex-col items-center gap-3"
     >
       <Heading
-        topText={"Hotel Divine View"}
+        topText={"HOTEL DIVINE VIEW"}
         mainHeading={"Enjoy your stay at the Hotel Divine View"}
         desc={
           "Experience elegance and comfort in our thoughtfully designed rooms at Hotel Divine View, offering a perfect blend of style, modern amenities, and personalized service"
