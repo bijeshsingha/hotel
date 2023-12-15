@@ -1,19 +1,19 @@
 const doubleDel = [
-  { src: "/images/Double Deluxe/DD.jpeg" },
-  { src: "/images/Double Deluxe/DD1.jpeg" },
-  { src: "/images/Double Deluxe/DD2.jpeg" },
+  "images/Double Deluxe/DD.jpeg",
+  "images/Double Deluxe/DD1.jpeg",
+  "images/Double Deluxe/DD2.jpeg",
 ];
 const familyExe = [
-  { src: "/images/Family Executive/FE.jpg" },
-  { src: "/images/Family Executive/FE1.jpg" },
-  { src: "/images/Family Executive/FE2.jpg" },
-  { src: "/images/Family Executive/FE3.jpg" },
+  "images/Family Executive/FE.jpg",
+  "images/Family Executive/FE1.jpg",
+  "images/Family Executive/FE2.jpg",
+  "images/Family Executive/FE3.jpg",
 ];
 const doubleExe = [
-  { src: "/images/Double Executive/DE.jpg" },
-  { src: "/images/Double Executive/DE1.jpeg" },
-  { src: "/images/Double Executive/DE2.jpeg" },
-  { src: "/images/Double Executive/DE3.jpg" },
+  "images/Double Executive/DE.jpg",
+  "images/Double Executive/DE1.jpeg",
+  "images/Double Executive/DE2.jpeg",
+  "images/Double Executive/DE3.jpg",
 ];
 
 const rooms = [

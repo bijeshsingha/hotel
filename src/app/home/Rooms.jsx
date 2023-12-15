@@ -5,11 +5,32 @@ import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import Button from "../components/PrimaryButton";
+import Carousel from "../components/Carousel";
+
+/*
+<div
+            className={`flex transition ease-in-out duration-400`}
+            style={{
+              transform: `translateX(-${current * 100}%)`,
+            }}
+          >
+            {slides.map((s,index) => {
+              return <img key={index} src={s.src} />;
+            })}
+          </div>
+          <div className=" absolute top-0 h-full w-full justify-between items-center flex text-white px-1 text-3xl">
+            <button onClick={previousSlide}>
+              <BsChevronCompactLeft />
+            </button>
+            <button onClick={nextSlide}>
+              <BsChevronCompactRight />
+            </button>
+          </div>
+          */
 
 const Rooms = ({ index, roomTitle, roomPrice, roomDesc, img, row }) => {
   const slides = img;
   let [current, setCurrent] = useState(0);
-  console.log(row);
   let previousSlide = () => {
     if (current === 0) setCurrent(slides.length - 1);
     else setCurrent(current - 1);
@@ -33,40 +54,7 @@ const Rooms = ({ index, roomTitle, roomPrice, roomDesc, img, row }) => {
         }
       >
         <div className="overflow-hidden relative rounded-xl w-[80%] md:w-[500px] lg:w-[600px]">
-          <div
-            className={`flex transition ease-in-out duration-400`}
-            style={{
-              transform: `translateX(-${current * 100}%)`,
-            }}
-          >
-            {slides.map((s,index) => {
-              return <img key={index} src={s.src} />;
-            })}
-          </div>
-          <div className=" absolute top-0 h-full w-full justify-between items-center flex text-white px-1 text-3xl">
-            <button onClick={previousSlide}>
-              <BsChevronCompactLeft />
-            </button>
-            <button onClick={nextSlide}>
-              <BsChevronCompactRight />
-            </button>
-          </div>
-
-          <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
-            {slides.map((s, i) => {
-              return (
-                <div
-                  onClick={() => {
-                    setCurrent(i);
-                  }}
-                  key={"circle" + i}
-                  className={`rounded-full md:w-5 md:h-5 w-3 h-3 cursor-pointer  ${
-                    i == current ? "bg-white" : "bg-gray-500"
-                  }`}
-                ></div>
-              );
-            })}
-          </div>
+          <Carousel images={slides} />
         </div>
       </div>
       <div
@@ -76,7 +64,9 @@ const Rooms = ({ index, roomTitle, roomPrice, roomDesc, img, row }) => {
         }
       >
         <h1 className="text-4xl lg:text-5xl heading-font text-[#c4a67e]">
-          <Link href={'/rooms/' + roomTitle.replace(/\s+/g, "")} >{roomTitle}</Link>
+          <Link href={"/rooms/" + roomTitle.replace(/\s+/g, "")}>
+            {roomTitle}
+          </Link>
         </h1>
         <p
           className={
