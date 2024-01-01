@@ -4,12 +4,10 @@ import Heading from "../components/Heading";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import reviews from './ReviewData'
-import ReviewCarousel from './ReviewCarosel'
+import reviews from "./ReviewData";
+import ReviewCarousel from "./ReviewCarosel";
 
 const Section4 = () => {
- 
-
   return (
     <section
       style={{
@@ -30,5 +28,7 @@ const Section4 = () => {
     </section>
   );
 };
+
+//
 
 export default Section4;

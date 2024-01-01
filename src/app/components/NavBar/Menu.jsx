@@ -7,30 +7,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
 
-const navLinks = [
-  {
-    title: "Home",
-    path: "/",
-  },
-  {
-    title: "Rooms",
-    path: "/rooms",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Gallery",
-    path: "/gallery",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-];
 
-const Search = () => {
+const Menu = ({navLinks}) => {
   return (
     <div
       className="menu hidden lg:block md:w-auto whitespace-nowrap"
@@ -67,4 +45,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Menu;

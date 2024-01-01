@@ -7,7 +7,8 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/NavBar/Nav";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
+import { ContextProvider } from "./context/ContextProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 const bodoni = Bodoni_Moda({ weight: "400", subsets: ["latin"] });
@@ -21,7 +22,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
   return (
     <html lang="en">
       <head>
@@ -39,9 +39,11 @@ export default function RootLayout({ children }) {
           pt.className
         }
       >
-        <Nav />
-        {children}
-        <Footer />
+        <ContextProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </ContextProvider>
       </body>
     </html>
   );

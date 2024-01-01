@@ -1,27 +1,15 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
-import Button from "../components/PrimaryButton";
+import React, { useState, useEffect, useRef } from "react";
+import Button from "../components/BookNowButton";
+import { useStateContext } from "../context/ContextProvider";
+
+const text =
+  "Hotel Divine View is located in the Heart of the City Guwahati at Paltan Bazar. Hotel Divine View is a brand new Hotel which started during the end of 2018 and within few months of operation it already making waves in Guwahati which focus on local fun, and packages for every type of visitor.";
 
 const Section1 = () => {
-  const [windowWidth, setWindowWidth] = useState(null);
-
-  useEffect(() => {
-    setWindowWidth(globalThis.window?.innerWidth);
-
-    const handleResize = () => {
-      setWindowWidth(globalThis.window?.innerWidth);
-    };
-
-    // Attach the event listener when the component mounts
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { windowWidth } = useStateContext();
 
   let styling =
     windowWidth < 1024
@@ -30,7 +18,7 @@ const Section1 = () => {
           width: "100%",
           height: "100%",
           backgroundSize: "cover",
-          overflow: "hidden",
+          overflow: "hidden", 
           backgroundPosition: "center",
         }
       : {};
@@ -48,11 +36,7 @@ const Section1 = () => {
             Welcome To Hotel Divine Diew
           </h1>
           <p className="para-font text-white lg:text-slate-500">
-            Hotel Divine View is located in the Heart of the City Guwahati at
-            Paltan Bazar. Hotel Divine View is a brand new Hotel which started
-            during the end of 2018 and within few months of operation it already
-            making waves in Guwahati which focus on local fun, and packages for
-            every type of visitor.
+            {text}
           </p>
         </div>
         <Link href={"/"}>

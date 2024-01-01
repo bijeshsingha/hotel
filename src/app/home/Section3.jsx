@@ -20,7 +20,7 @@ const Section3 = () => {
           <li className="flex flex-col justify-center">
             <FeaturesCard
               icon={
-                <Image src="/images/location.png" width={"80"} height={100} />
+                <Image src="/images/location.png" width={"80"} height={"80"} />
               }
               title="Great Location"
               desc="Located at the heart of the City, 500m to railway station"
@@ -29,7 +29,7 @@ const Section3 = () => {
           <li className="">
             <FeaturesCard
               icon={
-                <Image src="/images/parking.png" width={"80"} height={100} />
+                <Image src="/images/parking.png" width={"80"} height={"80"} />
               }
               title="Free Parking"
               desc="The Place has a free parking"
@@ -37,7 +37,7 @@ const Section3 = () => {
           </li>
           <li className="">
             <FeaturesCard
-              icon={<Image src="/images/wifi.png" width={"80"} height={100} />}
+              icon={<Image src="/images/wifi.png" width={"80"} height={"80"} />}
               title="Free Wifi"
               desc="We offer free wifi"
             />
@@ -47,7 +47,11 @@ const Section3 = () => {
           <li className="">
             <FeaturesCard
               icon={
-                <Image src="/images/roomService.png" width={"80"} height={100} />
+                <Image
+                  src="/images/roomService.png"
+                  width={"80"}
+                  height={"80"}
+                />
               }
               title="24hrs Room Service"
               desc="Room Service available 24hrs"
@@ -56,7 +60,7 @@ const Section3 = () => {
           <li className="">
             <FeaturesCard
               icon={
-                <Image src="/images/carRental.png" width={"80"} height={100} />
+                <Image src="/images/carRental.png" width={"80"} height={"80"} />
               }
               title="Car Rental/Travel Assistance"
               desc="Our expert will help you plan your trip"

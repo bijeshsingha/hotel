@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import Rooms from "./Rooms";
-import Button from "../components/PrimaryButton";
+import Button from "../components/BookNowButton";
 import Heading from "../components/Heading";
 import rooms from '../RoomsData'
 

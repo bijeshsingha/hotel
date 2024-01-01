@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
-import Button from "../components/PrimaryButton";
+import Button from "../components/BookNowButton";
 import Carousel from "../components/Carousel";
 
 /*
@@ -53,7 +53,7 @@ const Rooms = ({ index, roomTitle, roomPrice, roomDesc, img, row }) => {
           (row === "reverse" ? "lg:flex-row-reverse" : "lg:flex-row")
         }
       >
-        <div className="overflow-hidden relative rounded-xl w-[80%] md:w-[500px] lg:w-[600px]">
+        <div className="w-[90%] lg:w-[70%] rounded-xl overflow-hidden">
           <Carousel images={slides} />
         </div>
       </div>
@@ -70,7 +70,7 @@ const Rooms = ({ index, roomTitle, roomPrice, roomDesc, img, row }) => {
         </h1>
         <p
           className={
-            "text-lg lg:text-xl text-center para-font text-[#686868] " +
+            "text-lg text-center para-font text-[#686868] " +
             (row === "reverse"
               ? "lg:text-end px-3 md:px-5 lg:px-0 lg:pl-[30%]"
               : "lg:text-start px-3 md:px-5 lg:px-0 lg:pr-[30%]")
